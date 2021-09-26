@@ -1,0 +1,17 @@
+import pygame
+
+# Game Constants
+GAME_TITLE = 'My Game'
+SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
+FPS = 60
+
+# Game based on 800 * 600 res, this let you resize
+WIDTH_ADJUST, HEIGHT_ADJUST = SCREEN_WIDTH / 800, SCREEN_HEIGHT / 600
+WINDOW_COLUMN = SCREEN_WIDTH / 6
+WINDOW_ROW = SCREEN_HEIGHT / 5
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+BLUE = (0, 0, 255)
