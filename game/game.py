@@ -4,10 +4,11 @@ import pygame
 
 
 class GameState():
-    def __init__(self, screen):
+    def __init__(self, screen, resources):
         self.screen = screen
         self.state = 'intro'
         self.font = pygame.font.SysFont(None, 48)
+        self.resources = resources
 
     def set_state(self, state):
         self.state = state

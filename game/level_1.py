@@ -1,4 +1,4 @@
-from game.constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from game.constants.constants import SCREEN_HEIGHT, SCREEN_WIDTH
 import pygame
 import sys
 
@@ -15,9 +15,16 @@ class Level1():
 
         # draw
         manager.screen.fill('black')
+
+        # drawing background
+        back = manager.resources.get_image('backgrounds', 'bg_grasslands')
+        manager.screen.blit(back, (0, 0))
+
+        # drawing title
         title_image = manager.font.render('LEVEL1', True, 'Red')
         manager.screen.blit(title_image, (SCREEN_WIDTH /
                             2 - 100, SCREEN_HEIGHT / 2))
+
         pygame.display.update()
 
         pygame.display.flip()
