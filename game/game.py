@@ -1,12 +1,13 @@
 from game.level_1 import Level1
 from game.intro import IntroScreen
 import pygame
-import sys
 
 
 class GameState():
-    def __init__(self) -> None:
+    def __init__(self, screen):
+        self.screen = screen
         self.state = 'intro'
+        self.font = pygame.font.SysFont(None, 48)
 
     def set_state(self, state):
         self.state = state

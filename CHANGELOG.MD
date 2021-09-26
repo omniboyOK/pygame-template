@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2021-09-26
+
+### Added
+
+- Added font initialization
+- Added screen fill in every level to prevent caching old frames
+- Added a text in every level for clarity
+
+### Changed
+
+- Renamed WIN to SCREEN as it's more readable
+- Now game manager use the game screen as parameter
+- Screen flip and update toggled
+
 ## [1.1.0] - 2021-09-26
 
 ### Added
