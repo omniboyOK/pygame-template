@@ -1,4 +1,4 @@
-from game.constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from game.constants.constants import SCREEN_HEIGHT, SCREEN_WIDTH
 import pygame
 import sys
 
@@ -15,6 +15,12 @@ class IntroScreen():
 
         # draw
         manager.screen.fill('black')
+
+        # draw background
+        back = manager.resources.get_image('backgrounds', 'bg_shroom')
+        manager.screen.blit(back, (0, 0))
+
+        # draw title
         title_image = manager.font.render('INTRO SCREEN', True, 'Red')
         manager.screen.blit(title_image, (SCREEN_WIDTH /
                             2 - 100, SCREEN_HEIGHT / 2))
