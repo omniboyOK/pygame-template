@@ -17,7 +17,7 @@ class Level1():
         manager.screen.fill('black')
 
         # drawing background
-        back = manager.resources.get_image('backgrounds', 'bg_grasslands')
+        back = manager.resources.get_image('backgrounds', 'grasslands')
         manager.screen.blit(back, (0, 0))
 
         # drawing title

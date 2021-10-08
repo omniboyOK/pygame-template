@@ -1,5 +1,5 @@
-from game.level_1 import Level1
-from game.intro import IntroScreen
+from game.levels.level_1 import Level1
+from game.levels.intro import IntroScreen
 import pygame
 
 

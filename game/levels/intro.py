@@ -17,7 +17,7 @@ class IntroScreen():
         manager.screen.fill('black')
 
         # draw background
-        back = manager.resources.get_image('backgrounds', 'bg_shroom')
+        back = manager.resources.get_image('backgrounds', 'shrooms')
         manager.screen.blit(back, (0, 0))
 
         # draw title
