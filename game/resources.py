@@ -2,31 +2,38 @@ import pygame
 import glob
 import os
 
+from game.constants.images import REDUCER
+
 
 class ResourceManager():
     def __init__(self) -> None:
         self.resources = {}
-        self.imagedir = './game/assets/images/'
-        self.basedir = '/game/assets'
-        self.resource_list = os.walk(self.imagedir)
 
     def preload(self):
-        resource = {}
-        for dirs in self.resource_list:
-            for resource_folder in dirs[1]:
-                asset_list = glob.glob(
-                    self.imagedir + resource_folder + '/*.png')
-                for asset in asset_list:
-                    asset_name = os.path.splitext(os.path.basename(asset))[0]
-                    resource[asset_name] = pygame.image.load(
-                        asset).convert()
+        self.preload_images()
 
-        self.resources[resource_folder] = resource
+    def preload_images(self):
+        resource = {}
+
+        # default image
+        resource['default'] = pygame.image.load(
+            './game/assets/images/default.png').convert()
+
+        for library_key in REDUCER:
+            # Add the library to the temp resource dict
+            resource[library_key] = {}
+            for image_key in REDUCER[library_key]:
+                # Add the image preloaded to the resource library
+                resource[library_key][image_key] = pygame.image.load(
+                    REDUCER[library_key][image_key]).convert()
+        self.resources = resource
 
     def show_libraries(self):
         for key in self.resources:
             print(self.resources)
 
     def get_image(self, library, image):
-        # TODO: Add a custom image when resource not found (if not library/image in resources)
+        if library not in self.resources or image not in self.resources[library]:
+            return self.resources['default']
+
         return self.resources[library][image]
