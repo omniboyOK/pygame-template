@@ -41,7 +41,7 @@ mysql-connector-python==8.0.22
 numpy==1.19.4
 openpyxl==3.0.6
 pandas==1.3.1
-Pillow==8.3.1
+Pillow==9.0.0
 plotly==5.1.0
 pokemontcgsdk==2.0.0
 protobuf==3.14.0
