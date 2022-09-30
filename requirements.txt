@@ -29,7 +29,7 @@ itsdangerous==1.1.0
 jdcal==1.4.1
 Jinja2==2.11.2
 jinxed==1.0.1
-joblib==1.0.1
+joblib==1.2.0
 kiwisolver==1.3.1
 lazy-object-proxy==1.4.3
 lxml==4.6.5
