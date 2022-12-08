@@ -8,7 +8,7 @@ autopep8==1.5.7
 beautifulsoup4==4.9.3
 blessed==1.17.6
 catboost==0.26
-certifi==2020.12.5
+certifi==2022.12.7
 cfscrape==2.1.1
 chardet==3.0.4
 click==7.1.2
